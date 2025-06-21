@@ -20,7 +20,7 @@ def split_video(inp, out_dr, duration=780):
         end_time = min((i + 1) * duration, video_len)
 
         # Extract subclip
-        sub_clip = video.subclip(start_time, end_time)
+        sub_clip = video.subclipped(start_time, end_time)
 
         # Define output path
         out_file = os.path.join(out_dr, f'clip_{i + 1}.mp4')

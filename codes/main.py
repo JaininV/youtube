@@ -1,7 +1,8 @@
 from moviepy.video.io.VideoFileClip import VideoFileClip
+import cv2
 import os
 
-def split_video(inp, out_dr, duration=780):
+def split_video(inp, out_dr, duration):
     # Load the video file
     video = VideoFileClip(inp)
     
@@ -32,6 +33,6 @@ def split_video(inp, out_dr, duration=780):
     print("🎬 Video splitting complete!")
 
 # Example usage:
-inp = r"D:\D\Projects\Money handle\youtube\clips\clip_1.mp4"
-out_dir = r"D:\D\Projects\Money handle\youtube\video_clip"
-split_video(inp, out_dir, duration=780)
+inp = r"D:\D\Projects\Youtube\clips\clip_1.mp4"
+out_dir = r"D:\D\Projects\Youtube\video_clip"
+split_video(inp, out_dir, 60)

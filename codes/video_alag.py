@@ -27,8 +27,7 @@ def split_video_with_labels(input_path, output_dir, clip_length=60):
             total_duration = int(h * 3600 + m * 60 + s)
             break
     else:
-        return "Could not determine video duration."
-
+        print("Could not determine video duration.")
 
     # Create output directory
     output_dir = output_dir + f"/{file_name}"
@@ -65,8 +64,6 @@ def split_video_with_labels(input_path, output_dir, clip_length=60):
             out_file
         ]
         subprocess.run(command, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL, check=True)
-
-
 
     return {
         'msg': 'Process completed.'

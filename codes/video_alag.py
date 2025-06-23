@@ -27,8 +27,7 @@ def split_video_with_labels(input_path, output_dir, clip_length=60):
             total_duration = int(h * 3600 + m * 60 + s)
             break
     else:
-        print("Could not determine video duration.")
-        return
+        return "Could not determine video duration."
 
 
     # Create output directory
@@ -69,6 +68,8 @@ def split_video_with_labels(input_path, output_dir, clip_length=60):
 
 
 
-    print("All clips processed.")
+    return {
+        'msg': 'Process completed.'
+    }
 
 
